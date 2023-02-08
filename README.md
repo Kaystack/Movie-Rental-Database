@@ -10,9 +10,13 @@ The RentalRecord table links the movies and patrons and keeps track of the renta
 To recreate the database, simply run the movies database.sql script in your SQL server. The script contains the CREATE TABLE statements and sample data inserts.
 
 You can test the database by running various SQL queries. For example, the following query retrieves the list of movies rented by a particular patron:
+
 SELECT Movie.Title, RentalRecord.RentalDate, RentalRecord.ReturnDate
+
 FROM Movie
+
 JOIN RentalRecord ON Movie.MovieID = RentalRecord.MovieID
+
 WHERE RentalRecord.PatronID = 1;
 
 #Technologies Used
